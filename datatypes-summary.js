@@ -38,7 +38,29 @@ const myfunc = function(){
     
 }
 
-console.log(typeof bigNumber);
-console.log(typeof temp);
-console.log(typeof id);
+// console.log(typeof bigNumber);
+// console.log(typeof temp);
+// console.log(typeof id);
 
+
+// *************Memories*****************
+
+// Stack(Primitive) , Heap(Non-Primitive )
+
+let myYoutubeName = "vanshvlog.com"
+let anothername = myYoutubeName
+anothername = "makhija"
+
+console.log(myYoutubeName);
+console.log(anothername);
+
+let userone = {
+    name : "vansh",
+    age : 20,
+}
+
+let usertwo = userone
+
+usertwo.name = "makhija"
+
+console.log(userone , usertwo);
