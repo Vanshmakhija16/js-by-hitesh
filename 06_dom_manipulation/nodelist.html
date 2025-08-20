@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+    <style>
+        body{
+            background-color:#1b1a1a;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main";
+    div.id = Math.round(Math.random() * 10 +1);
+    div.setAttribute("title" , "generated title");
+    div.style.backgroundColor = "green";
+    div.style.padding = "12px";
+
+    // document.innerText = "Chai aur Code";
+    const addText = document.createTextNode("Chai aur code");
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
+
+
+   const newh1= document.createElement('h1')
+   newh1.className = "heading";
+   console.log(newh1);
+   newh1.style.padding = "12px"
+   newh1.id = Math.round(Math.random() * 10 + 1);
+   newh1.style.backgroundColor = "red";
+   const textbox =document.createTextNode("THIS IS HEADING")
+   newh1.appendChild(textbox)
+
+   document.body.appendChild(newh1)
+</script>
+</html>

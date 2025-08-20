@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Learning</title>
+    <style>
+        body{
+            background-color: #212121;
+            color : white;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-black">
+        <h1 id="title" class="heading">DOM learing on Chai or code </h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio minus iusto ea quam praesentium eligendi officiis aliquam dolore eveniet voluptas obcaecati, laudantium tenetur ad sapiente ab, dicta facere, eum fugit!</p>
+        <input type="password">
+
+        <div class="parent">
+            <div class="child">MON</div>
+            <div class="child">TUE</div>
+            <div class="child">WED</div>
+            <div class="child">THU</div>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1].innerHTML);
+    
+    // for(let i =0 ; i< parent.children.length ; i++){
+    //     console.log(parent.children[i].innerHTML);
+        
+    // }
+    parent.children[1].style.color = "orange"
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+
+    const day1 = document.querySelector('.child');
+    // console.log(day1);
+    // console.log(day1.parentElement);
+    // console.log(day1.nextElementSibling)
+    console.log(parent.childNodes);
+    
+</script>
+</html>
+
+<!-- innerHTML gives all the inner tags and text inside that div or anything
+    whereas innerTEXT gives only the visible text
+    and innerCONTENT gives the hide text  also. 
+-->

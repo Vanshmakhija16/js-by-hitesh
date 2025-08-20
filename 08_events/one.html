@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li> <img width = '200px' id="zebra" src="https://images.unsplash.com/photo-1598755257130-c2aaca1f061c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2lsZCUyMGFuaW1hbHxlbnwwfHwwfHx8MA%3D%3D"></li>
+            <li> <img width = '200px' id="tiger" src="https://i.natgeofe.com/k/c022030e-f1aa-4ab3-ad56-fdcdd4a1d08b/125-animals-tiger.jpg?wp=1&w=1084.125&h=609" onclick="alert('tiger')"></li>
+            <li> <img width = '200px' id="lion" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrDhg_LVguSFQtfFUiamLENJ_4X4n5ZufUEg&s"></li>
+          
+        </ul>
+        <li>  <a style="color: aliceblue;"  href="https://www.google.com/" id="google">GOOGlE</a></li>
+    </div>
+    
+</body>
+
+<script>
+    // document.getElementById('lion').onclick =function(e){
+    //     alert('lion clicked')
+    // };
+
+    // document.getElementById('zebra').addEventListener('click',function(e){
+    //     alert('zebra clicked')
+    //     console.log(e.timeStamp);
+        
+    // },false)
+
+    // type , timestamp , defaultprevented 
+    // target , toelement , srcElement ,currentTarget,
+    // clientX , clientY ,  screenX ,screenY
+    // altkey ,ctrlkey , shiftkey , keycode
+
+    // eventpropogation =>
+    // false => eventbubbling => inside to outside
+    // true => eventcapturing
+
+    // document.getElementById('images').addEventListener('click' , function (){
+    //     console.log("cicked inside the ul")
+    // },false)
+
+    // document.getElementById('lion').addEventListener('click' , function (e){
+    //     console.log("cicked inside the lion");
+    //     e.stopPropagation();
+    // },false)
+
+    // document.getElementById('google').addEventListener('click' , function(e){
+    //     e.preventDefault();
+    //     console.log("Google clicked");
+        
+    // },false)
+
+
+
+    // attachevent() -> Early time 
+    // jQuery -oneventlistener
+
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.parentNode);
+        if(e.target.tagName === 'IMG'){
+        let removeit = e.target.parentNode
+         removeit.remove()
+        // removeit.parentNode.removeChild(removeit)
+}    })
+
+</script>
+</html>
